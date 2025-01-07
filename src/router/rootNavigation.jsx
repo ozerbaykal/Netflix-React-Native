@@ -4,7 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {GETSTARTED, SIGNIN, WATCHLIST} from '../utils/routes';
 import SignIn from '../screens/signIn';
 import WatchList from '../screens/watchList';
-import Header from '../components/router/header';
+import {ThemeColors} from '../theme/themeColors';
+import {Edit2} from 'iconsax-react-native';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +14,10 @@ const RootNavigation = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={({navigation}) => ({
-          header: () => <Header />,
+          headerTintColor: ThemeColors.WHITE,
+          headerStyle: {
+            backgroundColor: ThemeColors.BLACK,
+          },
         })}>
         <Stack.Screen
           options={{
@@ -23,7 +27,13 @@ const RootNavigation = () => {
           component={GetStarted}
         />
         <Stack.Screen name={SIGNIN} component={SignIn} />
-        <Stack.Screen name={WATCHLIST} component={WatchList} />
+        <Stack.Screen
+          options={{
+            headerRight: () => <Edit2 size={25} color={ThemeColors.WHITE} />,
+          }}
+          name={WATCHLIST}
+          component={WatchList}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

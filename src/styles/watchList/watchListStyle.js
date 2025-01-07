@@ -2,15 +2,11 @@ import { StyleSheet } from 'react-native';
 import { ThemeColors } from '../../theme/themeColors';
 
 
-const watchStyle = StyleSheet.create({
-    container: {
+const watchListStyle = StyleSheet.create({
 
-
-
-    },
 
 
 
 
 })
-export default watchStyle;
+export default watchListStyle;
