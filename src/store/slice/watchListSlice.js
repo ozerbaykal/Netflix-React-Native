@@ -8,8 +8,23 @@ const initialState = {
             id: 1,
             title: "movie",
             gender: "horror"
-        }
-    ]
+        },
+        {
+            id: 2,
+            title: "movie",
+            gender: "comedy"
+        },
+        {
+            id: 3,
+            title: "movie",
+            gender: "romance"
+        },
+        {
+            id: 4,
+            title: "movie",
+            gender: "west"
+        },
+    ],
 }
 
 const watchListSlice = createSlice({
@@ -19,7 +34,7 @@ const watchListSlice = createSlice({
 
     reducers: {
         addNewList: (state, action) => {
-            state.watcList = [...state.watcList, action.payload]
+            state.watchList = [...state.watchList, action.payload]
 
         },
 

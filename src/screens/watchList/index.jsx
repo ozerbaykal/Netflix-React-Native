@@ -1,14 +1,19 @@
-import {Text, View, SafeAreaView} from 'react-native';
+import {Text, View, FlatList} from 'react-native';
 import {useSelector} from 'react-redux';
-import watchListStyle from '../../styles/watchList/watchListStyle';
 import defaultScreenStyle from '../../styles/defaultScreenStyle';
+import WatchListItem from '../../components/watchList/watchListItem';
 
 const WatchList = () => {
   const {watchList} = useSelector(state => state.watchList);
-  console.log(watchList);
+
   return (
     <View style={defaultScreenStyle.container}>
-      <Text>WatchList</Text>
+      <FlatList
+        numColumns={2}
+        contentContainerStyle={{alignItems: 'center'}}
+        data={watchList}
+        renderItem={({item}) => <WatchListItem item={item} />}
+      />
     </View>
   );
 };

@@ -13,7 +13,7 @@ const buttonStyle = StyleSheet.create({
     },
     title: {
         color: ThemeColors.WHITE,
-        fontSize: 26,
+        fontSize: 24,
         fontWeight: "bold"
 
     }
