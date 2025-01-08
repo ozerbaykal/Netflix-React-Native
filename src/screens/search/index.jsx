@@ -1,9 +1,10 @@
 import {Text, View} from 'react-native';
 import React from 'react';
+import defaultScreenStyle from '../../styles/defaultScreenStyle';
 
 const Search = () => {
   return (
-    <View>
+    <View style={defaultScreenStyle.container}>
       <Text>Search</Text>
     </View>
   );

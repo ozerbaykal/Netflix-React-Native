@@ -44,7 +44,13 @@ const RootNavigation = () => {
           component={WatchList}
         />
         <Stack.Screen name={ADDNEWLIST} component={AddNewList} />
-        <Stack.Screen name={TAB} component={TabNavigator} />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name={TAB}
+          component={TabNavigator}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
