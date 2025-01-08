@@ -15,11 +15,11 @@ const watchListItemStyle = StyleSheet.create({
 
     },
     iconContainer: {
-        width: width / 2 - 60,
-        height: width / 2 - 60,
+        width: width * 0.3,
+        height: width * 0.3,
         justifyContent: "center",
         alignItems: "center",
-        borderRadius: 5
+        borderRadius: 2
 
 
     },
