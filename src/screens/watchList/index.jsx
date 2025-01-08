@@ -1,4 +1,4 @@
-import {Text, View, FlatList} from 'react-native';
+import {Text, View, FlatList, TextInput} from 'react-native';
 import {useSelector} from 'react-redux';
 import defaultScreenStyle from '../../styles/defaultScreenStyle';
 import WatchListItem from '../../components/watchList/watchListItem';

@@ -8,6 +8,7 @@ import {Pressable} from 'react-native';
 
 const WatchListItem = ({item}) => {
   const backgroundColor = useMemo(() => getRandomColor(), []);
+
   return (
     <Pressable style={watchListItemStyle.container}>
       <View
