@@ -9,7 +9,6 @@ const buttonStyle = StyleSheet.create({
         paddingVertical: 15,
         justifyContent: "center",
         alignItems: "center",
-        marginTop: height * 0.07,
         borderRadius: 10
 
 
