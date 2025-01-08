@@ -6,24 +6,10 @@ const initialState = {
     watchList: [
         {
             id: 1,
-            title: "movie",
+            title: "All",
             gender: "horror"
         },
-        {
-            id: 2,
-            title: "movie",
-            gender: "comedy"
-        },
-        {
-            id: 3,
-            title: "movie",
-            gender: "romance"
-        },
-        {
-            id: 4,
-            title: "movie",
-            gender: "west"
-        },
+
     ],
 }
 

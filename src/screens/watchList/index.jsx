@@ -10,7 +10,6 @@ const WatchList = () => {
     <View style={defaultScreenStyle.container}>
       <FlatList
         numColumns={2}
-        contentContainerStyle={{alignItems: 'center'}}
         data={watchList}
         renderItem={({item}) => <WatchListItem item={item} />}
       />

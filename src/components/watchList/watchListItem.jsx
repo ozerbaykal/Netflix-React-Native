@@ -1,17 +1,24 @@
 import {Text, View} from 'react-native';
-import React from 'react';
+import React, {useMemo} from 'react';
 import watchListItemStyle from '../../styles/watchList/watchListItemStyle';
 import {Smileys} from 'iconsax-react-native';
 import {ThemeColors} from '../../theme/themeColors';
+import {getRandomColor} from '../../utils/functions';
+import {Pressable} from 'react-native';
 
 const WatchListItem = ({item}) => {
+  const backgroundColor = useMemo(() => getRandomColor(), []);
   return (
-    <View style={watchListItemStyle.container}>
-      <View style={watchListItemStyle.iconContainer}>
-        <Smileys size={50} color={ThemeColors.WHITE} />
+    <Pressable style={watchListItemStyle.container}>
+      <View
+        style={[
+          watchListItemStyle.iconContainer,
+          {backgroundColor: backgroundColor},
+        ]}>
+        <Smileys size={100} color={ThemeColors.WHITE} />
       </View>
       <Text style={watchListItemStyle.title}>{item.title}</Text>
-    </View>
+    </Pressable>
   );
 };
 

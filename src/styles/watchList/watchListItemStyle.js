@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { ThemeColors } from '../../theme/themeColors';
-import { Wind } from 'iconsax-react-native';
+import { width } from '../../utils/constanst';
 
 
 const watchListItemStyle = StyleSheet.create({
@@ -9,16 +9,17 @@ const watchListItemStyle = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         margin: 10,
-        backgroundColor: "gray",
+        //backgroundColor: "gray",
+
         paddingTop: 5
 
     },
     iconContainer: {
-        width: 140,
-        height: 140,
-        backgroundColor: "red",
+        width: width / 2 - 60,
+        height: width / 2 - 60,
         justifyContent: "center",
         alignItems: "center",
+        borderRadius: 5
 
 
     },
