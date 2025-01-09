@@ -25,7 +25,8 @@ const watchListSlice = createSlice({
         },
 
 
-    }
+    },
+
 })
 
 export const { addNewList } = watchListSlice.actions;
