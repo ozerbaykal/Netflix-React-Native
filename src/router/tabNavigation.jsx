@@ -5,13 +5,14 @@ import Search from '../screens/search';
 import Downloads from '../screens/downloads';
 import {DOWNLOADS, HOME, NEWHOT, SEARCH} from '../utils/routes';
 import {ThemeColors} from '../theme/themeColors';
+import TabBarIcon from '../components/router/tabIcon';
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
   return (
     <Tab.Navigator
-      screenOptions={{
+      screenOptions={({route}) => ({
         headerStyle: {
           backgroundColor: ThemeColors.BLACK,
         },
@@ -21,7 +22,15 @@ const TabNavigator = () => {
         },
         tabBarActiveTintColor: ThemeColors.WHITE,
         //tabBarInactiveTintColor: ThemeColors.WHITE,
-      }}>
+        tabBarIcon: ({focused, color, size}) => (
+          <TabBarIcon
+            focused={focused}
+            color={color}
+            size={size}
+            route={route}
+          />
+        ),
+      })}>
       <Tab.Screen name={HOME} component={Home} />
       <Tab.Screen name={NEWHOT} component={NewHot} />
       <Tab.Screen name={SEARCH} component={Search} />
