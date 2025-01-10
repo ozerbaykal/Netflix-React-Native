@@ -4,7 +4,7 @@ const sectionsStyle = StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: "gray"
+
 
 
     },

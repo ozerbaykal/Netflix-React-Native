@@ -1,11 +1,15 @@
-import {Text, View} from 'react-native';
+import {Image, Text, View} from 'react-native';
 import React from 'react';
 import movieItemStyle from '../../styles/componentsStyle/movieItemStyle';
+import {IMAGE_BASE_URL} from '../../service/url';
 
 const MovieItem = ({item}) => {
   return (
     <View style={movieItemStyle.container}>
-      <Text>{item.title}</Text>
+      <Image
+        source={{uri: IMAGE_BASE_URL + item?.backdrop_path}}
+        style={movieItemStyle.image}
+      />
     </View>
   );
 };

@@ -8,7 +8,9 @@ const sectionStyle = StyleSheet.create({
     },
     title: {
         color: ThemeColors.WHITE,
-        fontSize: 18,
+        fontSize: 20,
+        fontWeight: "bold",
+        marginVertical: 20
 
     }
 
