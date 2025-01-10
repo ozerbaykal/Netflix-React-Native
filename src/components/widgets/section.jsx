@@ -5,13 +5,13 @@ import {useSelector} from 'react-redux';
 import MovieItem from '../movies/movieItem';
 
 const Section = ({item}) => {
-  const {topRatedMovies} = useSelector(store => store.movies);
+  const {popularMovies} = useSelector(state => state.movies);
   return (
     <View style={sectionStyle.container}>
       <Text style={sectionStyle.title}>{item.title}</Text>
       <FlatList
         horizontal
-        data={topRatedMovies}
+        data={popularMovies}
         renderItem={({item}) => <MovieItem item={item} />}
       />
     </View>

@@ -11,6 +11,7 @@ const movieItemStyle = StyleSheet.create({
         width: width * 0.3,
         height: height * 0.2,
         borderRadius: 5,
+        resizeMode: "cover"
     }
 
 })

@@ -4,19 +4,18 @@ import defaultScreenStyle from '../../styles/defaultScreenStyle';
 import {useDispatch, useSelector} from 'react-redux';
 import {
   getCategories,
+  getPopularMovies,
   getTopRatedMovies,
 } from '../../store/actions/movieActions';
-import CategoryItem from '../../components/widgets/categoryItem';
 import Categories from '../../widgets/categories';
 import Sections from '../../widgets/sections';
 
 const Home = () => {
-  const {topRatedMovies, categories} = useSelector(state => state.movies);
-
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCategories());
     dispatch(getTopRatedMovies());
+    dispatch(getPopularMovies());
   }, []);
 
   return (
