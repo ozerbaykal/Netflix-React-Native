@@ -8,7 +8,7 @@ const Client = axios.create()
 Client.defaults.baseURL = BASEURL;
 Client.defaults.params = {
     api_key: API_KEY,
-    language: "tr-TR",
+    language: "en-EN",
 
 
 }
