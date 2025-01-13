@@ -8,15 +8,15 @@ const token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNjY5YTcxNmRhZDhjOWI3ODk3YzQ3Mjlj
 const sections = [
     {
         id: 1,
-        title: "Releases in the Past Year"
+        title: "Top Rated Movies"
     },
     {
         id: 2,
-        title: "Continue Watching for Drashti"
+        title: "Popular"
     },
     {
         id: 3,
-        title: "Suspenseful TV Shows "
+        title: "UpComing "
     },
     {
         id: 4,
